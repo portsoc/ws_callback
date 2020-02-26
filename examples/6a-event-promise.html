@@ -1,0 +1,25 @@
+<!doctype html>
+<title>HTML Event Once: load with promise</title>
+
+<body>
+  <h1>HTML Event Once: load with promise</h1>
+</body>
+
+<script>
+  function sayHi() {
+    document.body.append('hi');
+  }
+
+  window.loaded = new Promise((resolve, reject) => {
+    window.addEventListener('load', resolve);
+  });
+
+  async function main() {
+    await window.loaded;
+    sayHi();
+  }
+
+main() 
+
+</script>
+
