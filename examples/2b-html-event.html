@@ -1,0 +1,17 @@
+<!doctype html>
+<title>HTML Event: click</title>
+
+<body>
+
+  <h1>HTML Event: click</h1>
+  <button id=b>Click Me</button>
+
+  <script>
+    function sayHi() {
+      document.body.append('hi ');
+    }
+
+    document.querySelector('#b').addEventListener('click', sayHi);
+  </script>
+
+</body>
