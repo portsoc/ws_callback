@@ -4,18 +4,17 @@
 
 const SIX_NATIONS = [ "England", "France", "Ireland", "Italy", "Scotland", "Wales" ];
 
-
+function betterPrint(index, item, array) {
+  console.log(`item ${index} in array ${array} is ${item}`);
+}
 
 function printArrayForEachParams(arr) {
-  arr.forEach((item, index, array) => {
-    console.log(`item ${index} in array ${array} is ${item}`);
-  });
+  arr.forEach(betterPrint);
 }
 
 function printArrayForEachDirect(arr) {
   arr.forEach(console.log);
 }
-
 
 
 console.log('with our function');
