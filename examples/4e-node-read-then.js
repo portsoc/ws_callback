@@ -10,14 +10,24 @@ fs.readFileAsync = util.promisify(fs.readFile);
 
 function main() {
   fs.readFileAsync('data/1.txt', 'utf8')
-  .then(print)
-  .then(() => fs.readFileAsync('data/2.json', 'utf8') )
-  .then(print)
-  .then(() => fs.readFileAsync('data/3.txt', 'utf8') )
-  .then(print)
-  .then(() => {
-    print("finished!");
-  });
+    .then(data => {
+      print(data);
+    })
+    .then(() => {
+      fs.readFileAsync('data/2.json', 'utf8');
+    })
+    .then(data => {
+      print(data);
+    })
+    .then(() => {
+      fs.readFileAsync('data/3.txt', 'utf8');
+    })
+    .then(data => {
+      print(data);
+    })
+    .then(() => {
+      print("finished!");
+    });
 }
 
 main();

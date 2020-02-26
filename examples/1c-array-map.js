@@ -4,6 +4,10 @@
 
 const SIX_NATIONS = [ "England", "France", "Ireland", "Italy", "Scotland", "Wales" ];
 
+function shorten(str) {
+  return str.substring(0,3).toUpperCase();
+}
+
 function shortenArrayLoop(arr) {
   const retval = [];
   for (const item of arr) {
@@ -12,17 +16,13 @@ function shortenArrayLoop(arr) {
   return retval;
 }
 
-function shorten(str) {
-  return str.substring(0,3).toUpperCase();
-}
-
 function shortenArrayMap(arr) {
   return arr.map(shorten);
 }
 
-console.info('with loop');
+console.log('with loop');
 console.log(shortenArrayLoop(SIX_NATIONS));
 
-console.info();
-console.info('with map');
+console.log();
+console.log('with map');
 console.log(shortenArrayMap(SIX_NATIONS));
