@@ -1,0 +1,20 @@
+<!doctype html>
+<title>Fetch with then()</title>
+
+<h1>Fetch with then()</h1>
+
+<script>
+  const URL = 'https://gist.githubusercontent.com/ear1grey/070571c34b914ee468e421aa28cbed26/raw/7aefbd8de4c746d5692890441f3e6ecf90168514/data.json';
+
+  fetch(URL)
+  .then(response => {
+    if (response.ok) return response.text()
+    else throw new Error('cannot load data');
+  })
+  .then(data => {
+    document.body.append(data);
+  })
+  .catch(e => {
+    console.error(e);
+  });
+</script>
