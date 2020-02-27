@@ -4,9 +4,12 @@
 
 const fs = require('fs');
 const util = require('util');
-const print = console.log;
 
 fs.readFileAsync = util.promisify(fs.readFile);
+
+function print(string) {
+  console.log(string);
+}
 
 function main() {
   fs.readFileAsync('data/1.txt', 'utf8')
@@ -14,13 +17,13 @@ function main() {
       print(data);
     })
     .then(() => {
-      fs.readFileAsync('data/2.json', 'utf8');
+      return fs.readFileAsync('data/2.json', 'utf8');
     })
     .then(data => {
       print(data);
     })
     .then(() => {
-      fs.readFileAsync('data/3.txt', 'utf8');
+      return fs.readFileAsync('data/3.txt', 'utf8');
     })
     .then(data => {
       print(data);

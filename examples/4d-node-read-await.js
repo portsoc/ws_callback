@@ -7,7 +7,7 @@ const util = require('util');
 
 fs.readFileAsync = util.promisify(fs.readFile);
 
-function print(err, string) {
+function print(string) {
   console.log(string);
 }
 

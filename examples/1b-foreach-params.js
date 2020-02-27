@@ -4,7 +4,7 @@
 
 const SIX_NATIONS = [ "England", "France", "Ireland", "Italy", "Scotland", "Wales" ];
 
-function fullPrint(index, item, array) {
+function fullPrint(item, index, array) {
   console.log(`item ${index} in array ${array} is ${item}`);
 }
 
