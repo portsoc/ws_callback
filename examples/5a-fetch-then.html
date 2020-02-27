@@ -8,8 +8,11 @@
 
   fetch(URL)
   .then(response => {
-    if (response.ok) return response.text()
-    else throw new Error('cannot load data');
+    if (response.ok) {
+      return response.text()
+    } else {
+      throw new Error('cannot load data');
+    }
   })
   .then(data => {
     document.body.append(data);

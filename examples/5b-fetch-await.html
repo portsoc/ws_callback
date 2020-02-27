@@ -7,14 +7,18 @@
   const URL = 'https://gist.githubusercontent.com/ear1grey/070571c34b914ee468e421aa28cbed26/raw/7aefbd8de4c746d5692890441f3e6ecf90168514/data.json';
 
   async function main() {
-    const response = await fetch(URL);
-    if (response.ok) {
-      const data = await response.text()
-      document.body.append(data);
-    } else {
-      console.error('cannot load data');
+    try {
+      const response = await fetch(URL);
+      if (response.ok) {
+        const data = await response.text()
+        document.body.append(data);
+      } else {
+        throw new Error('cannot load data');
+      }
+    } catch (e) {
+      console.error(e);
     }
   }
 
-  window.addEventListener('load', main);
+  main();
 </script>
