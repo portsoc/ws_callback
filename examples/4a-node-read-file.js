@@ -2,7 +2,7 @@
  * Example of asynchronous filesystem access.
  */
 
-const fs = require('fs');
+import fs from 'fs';
 
 function print(err, string) {
   console.log({err, string});

@@ -2,28 +2,25 @@
  * Example of asynchronous filesystem access with promisified fs, but using then().
  */
 
-const fs = require('fs');
-const util = require('util');
-
-fs.readFileAsync = util.promisify(fs.readFile);
+import fs from 'fs/promises';
 
 function print(string) {
   console.log(string);
 }
 
 function main() {
-  fs.readFileAsync('data/1.txt', 'utf8')
+  fs.readFile('data/1.txt', 'utf8')
     .then(data => {
       print(data);
     })
     .then(() => {
-      return fs.readFileAsync('data/2.json', 'utf8');
+      return fs.readFile('data/2.json', 'utf8');
     })
     .then(data => {
       print(data);
     })
     .then(() => {
-      return fs.readFileAsync('data/3.txt', 'utf8');
+      return fs.readFile('data/3.txt', 'utf8');
     })
     .then(data => {
       print(data);

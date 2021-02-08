@@ -2,7 +2,7 @@
  * Example of asynchronous filesystem access in set order.
  */
 
-const fs = require('fs');
+import fs from 'fs';
 
 function print(string) {
   console.log(string);

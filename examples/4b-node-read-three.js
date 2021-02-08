@@ -2,7 +2,7 @@
  * Example of asynchronous filesystem access with unpredictable order.
  */
 
-const fs = require('fs');
+import fs from 'fs';
 
 function print(err, string) {
   console.log({err, string});

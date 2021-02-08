@@ -1,0 +1,24 @@
+{
+  "name": "ws_callback",
+  "version": "1.0.0",
+  "description": "Examples for callbacks and promises",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/portsoc/ws_callback.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/portsoc/ws_callback/issues"
+  },
+  "homepage": "https://github.com/portsoc/ws_callback#readme"
+}
